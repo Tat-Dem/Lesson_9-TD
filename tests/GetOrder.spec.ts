@@ -24,7 +24,7 @@ test('get order with id = %', async ({ request }) => {
   // Build and send a GET request to the server
   const response = await request.get('https://backend.tallinn-learning.ee/test-orders/%')
   // Log the response status, body and headers
-  console.log(response);
+  console.log(response)
   // Check if the response status is 400
   expect(response.status()).toBe(400)
 })
@@ -33,7 +33,7 @@ test('get order with id = first and get 400 error', async ({ request }) => {
   // Build and send a GET request to the server
   const response = await request.get('https://backend.tallinn-learning.ee/test-orders/first')
   // Log the response status, body and headers
-  console.log(response);
+  console.log(response)
   // Check if the response status is 400
   expect(response.status()).toBe(400)
 })
@@ -42,7 +42,7 @@ test('get order with empty id and get 500 error', async ({ request }) => {
   // Build and send a GET request to the server
   const response = await request.get('https://backend.tallinn-learning.ee/test-orders/')
   // Log the response status, body and headers
-  console.log(response);
+  console.log(response)
   // Check if the response status is 500
   expect(response.status()).toBe(500)
 })
