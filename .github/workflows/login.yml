@@ -1,4 +1,4 @@
-name: Check formatting, linting, and run tests
+name: Login tests
 
 on:
   push:
