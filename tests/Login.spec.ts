@@ -25,21 +25,21 @@ test.describe('Login tests', async () => {
     const response = await request.get('https://backend.tallinn-learning.ee/login/student', {
       data: LoginDTO.createLoginWithCorrectData(),
     })
-    console.log(await response.text());
+    console.log(await response.text())
     expect(response.status()).toBe(StatusCodes.METHOD_NOT_ALLOWED)
   })
   test('Unsuccessful authorization with PUT method', async ({ request }) => {
     const response = await request.put('https://backend.tallinn-learning.ee/login/student', {
       data: LoginDTO.createLoginWithCorrectData(),
     })
-    console.log(await response.text());
+    console.log(await response.text())
     expect(response.status()).toBe(StatusCodes.METHOD_NOT_ALLOWED)
   })
   test('Unsuccessful authorization with DELETE method', async ({ request }) => {
     const response = await request.delete('https://backend.tallinn-learning.ee/login/student', {
       data: LoginDTO.createLoginWithCorrectData(),
     })
-    console.log(await response.text());
+    console.log(await response.text())
     expect(response.status()).toBe(StatusCodes.METHOD_NOT_ALLOWED)
   })
 })
